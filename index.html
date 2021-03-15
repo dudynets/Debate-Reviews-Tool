@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Debate Reviews Tool</title>
+    <meta charset="utf-8" />
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name='viewport' content='viewport-fit=cover, width=device-width'>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" type="image/png" />
+</head>
+  <body>
+    <p class="developerInfo">Developed by <a href="https://dudynets.pp.ua">Oleksandr Dudynets</a></p>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="section" id="section">
+        <h1>Debate Reviews Tool</h1>
+
+        <div class="buttons">
+            <span>
+                <a href="participants"><button><i class="fas fa-user"></i><span>Participants</span></button></a>
+            </span>
+            <span>
+                <a href="judges"><button><i class="fas fa-gavel"></i><span>Judges</span></button></a>
+            </span>
+        </div>
+    </div>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+      }
+    </script>
+  </body>
+</html>

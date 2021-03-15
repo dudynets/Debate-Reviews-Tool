@@ -1,0 +1,85 @@
+html {
+    font-family: sans-serif;
+}
+
+.overlay {
+    background: url(https://source.unsplash.com/collection/176316/1080) center center #000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    filter: blur(5px) brightness(0.4);
+    transform: scale(1.1);
+}
+
+.section {
+    width: 90%;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 0;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: ease all .2s;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 2px white solid;
+    margin: 14px 10px 0px 10px;
+}
+
+button span {
+    margin-left: 7px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px white solid;
+    border-radius: 30px;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.developerInfo {
+    position: absolute;
+    color: white;
+    z-index: 99999;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.developerInfo a {
+    color: white;
+    text-decoration: none;
+}
+
+.developerInfo a:hover {
+    text-decoration: underline;
+}

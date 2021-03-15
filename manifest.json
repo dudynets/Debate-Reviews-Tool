@@ -1,0 +1,17 @@
+{
+    "name": "Debate Reviews Tool",
+    "short_name": "Debate Reviews Tool",
+    "start_url": "index.html",
+    "scope": "./",
+    "icons": [
+      {
+        "src": "assets/icon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable any"
+      }
+    ],
+    "theme_color": "#0199F1",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

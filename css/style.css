@@ -1,0 +1,104 @@
+html {
+    font-family: sans-serif;
+}
+
+.overlay {
+    background: url(https://source.unsplash.com/collection/176316/1080) center center #000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    filter: blur(5px) brightness(0.4);
+    transform: scale(1.1);
+}
+
+.section {
+    width: 90%;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .section {
+        width: 90%;
+        z-index: 2;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        padding: 20px 0 50px 0;
+    }
+
+    .developerInfo {
+        display: none;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.subHeading {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#loadingText {
+    margin-top: -30px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+}
+
+#loadingText .spinner {
+    margin-top: 20px;
+    border: 4px solid white;
+    border-top: 4px solid transparent;
+    width: 35px;
+    height: 35px;
+}
+
+#loadingText span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.developerInfo {
+    position: absolute;
+    color: white;
+    z-index: 99999;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.developerInfo a {
+    color: white;
+    text-decoration: none;
+}
+
+.developerInfo a:hover {
+    text-decoration: underline;
+}

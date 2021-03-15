@@ -1,0 +1,85 @@
+button {
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 2px white solid;
+    border-radius: 30px;
+    color: white;
+    transition: ease all .2s;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+button span {
+    margin-left: 7px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px white solid;
+    border-radius: 30px;
+}
+
+.buttons {
+    align-items: center;
+    margin-top: 40px;
+}
+
+.buttonsRow {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.buttonsRow:nth-of-type(1) {
+    text-align: center;
+    margin-top: -14px;
+}
+
+#send, #clearTable, #download, #signout {
+    background-color: transparent;
+    color: white;
+    border: 2px white solid;
+    margin: 14px 5px 0px 5px;
+}
+
+#send:hover {
+    background-color: rgb(1, 153, 241);
+    color: white;
+    border: 2px rgb(1, 153, 241) solid;
+    border-radius: 30px;
+}
+
+#download:hover {
+    background-color: rgb(0, 179, 24);
+    color: white;
+    border: 2px rgb(0, 179, 24) solid;
+    border-radius: 30px;
+}
+
+#clearTable:hover, #signout:hover {
+    background-color: #da1e37;
+    color: white;
+    border: 2px #da1e37 solid;
+    border-radius: 30px;
+}
+
+#getBotUpdates {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+#showRecipients, #changeID, #changeRecipients {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+#getBotUpdates:hover, #showRecipients:hover, #changeID:hover, #changeRecipients:hover {
+    text-decoration: underline;
+}

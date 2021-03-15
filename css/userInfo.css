@@ -1,0 +1,55 @@
+.userInfo {
+    display: table;
+    margin: -5px auto 0 auto;
+}
+
+#userImage {
+    float: left;
+    border-radius: 50%;
+}
+
+.textInfo {
+    color: white;
+    margin-left: 116px;
+}
+
+#name {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+#email {
+    font-size: 16px;
+} 
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .userInfo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #userImage {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .textInfo {
+        color: white;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    #name {
+        margin-bottom: 0px;
+    }
+}

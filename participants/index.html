@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Debate Reviews Tool</title>
+    <meta charset="utf-8" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name='viewport' content='viewport-fit=cover, width=device-width'>
+
+    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/loader.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/userInfo.css">
+    <link rel="stylesheet" href="../assets/alertify/alertify.css" />
+    <link rel="stylesheet" href="../assets/alertify/default.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../assets/icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/icon.png" type="image/png" />
+  </head>
+  <body>
+    <p class="developerInfo">Developed by <a href="https://dudynets.pp.ua">Oleksandr Dudynets</a></p>
+
+    <div class="loader" id="loader" style="display: none;" onclick="cancelLogIn()">
+      <div class="spinner"></div>
+    </div>
+
+    <div id="popupBox" class="popupBox">
+      <div class="popup">
+        <h2 id="popupHeading">Recipients:</h2>
+        <a class="close" href="#" onclick="closePopup()">&times;</a>
+        <div class="content" id="content">
+          <pre id="popupPre"></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="section" id="section">
+      <a href="../"><h1>Debate Reviews Tool</h1></a>
+      <p class="subHeading">For participants</p>
+
+      <div id="loadingText">
+        <div class="spinner"></div>
+
+      </div>
+
+      <div class="userInfo" id="userInfoDiv" style="display: none;">
+          <img id="userImage" width="96px" height="96px" alt="">
+
+          <div class="textInfo">
+              <h3 id="name">Name</h3>
+              <p id="email">Email</p>
+          </div>
+      </div>
+
+      <div class="buttons">
+          <div class="buttonsRow">
+              <span>
+                  <button id="send" style="display: none;" onclick="send()"><i class="fas fa-paper-plane"></i><span>Send</span></button>
+              </span>
+              <span>
+                  <button id="download" style="display: none;" onclick="download()"><i class="fas fa-download"></i><span>Download</span></button>
+              </span>
+          </div>
+
+          <button id="authorize" style="display: none;"><i class="fas fa-sign-in-alt"></i><span>Authorize</span></button>
+          
+          <div class="buttonsRow">
+              <span>
+                  <button id="clearTable" style="display: none;" onclick="clearTable()"><i class="fas fa-trash-alt"></i><span></span>Clear table</span></button>
+              </span>
+              <span>
+                  <button id="signout" style="display: none;"><i class="fas fa-sign-out-alt"></i><span>Sign Out</span></button>
+              </span>
+          </div>
+        </div>
+
+        <p id="getBotUpdates" style="display: none;" onclick="getBotUpdates()">Show bot updates</p>
+        <p id="showRecipients" style="display: none;" onclick="showPopup('Recipients:', RECIPIENTS)">Show recipients</p>
+        <p id="changeRecipients" style="display: none;" onclick="changeRecipients()">Set recipients</p>
+        <p id="changeID" style="display: none;" onclick="changeSheetID()">Set spreadsheet ID</p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+    <script src="../assets/alertify/alertify.js"></script>
+    <script src="../settings.js"></script>
+    <script src="app.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>
